@@ -20,11 +20,15 @@ Route::get('/', function () {
 Auth::routes(['register'=> false, 'reset'=>false]);
 	// Route::get('/home', 'HomeController@index')->name('home');
 	
-
+Route::group(['middleware' => ['role:superadministrator']], function () {
+	Route::resource('users', 'UsersController');
+	Route::resource('permission', 'PermissionController');
+	Route::resource('roles', 'RolesController');
+});
 	
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::group(['middleware' => ['role:superadministrator']], function() {
+    Route::group(['middleware' => ['role:superadministrator|administrator']], function() {
     	Route::get('/home', 'QrscanController@index')->name('home');
 
 		Route::resource('/visitor', 'VisitorController');

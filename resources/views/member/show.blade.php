@@ -56,16 +56,12 @@
                     <img class="col-sm-3" src="{{asset($member->photo)}}" alt="">
                   </div>
                 </div>
-                <div class="form-group row">
-                    <label for="input-1" class="col-sm-2 col-form-label">Pilih Foto</label>
-                    <div class="col-sm-10">  
-                        <input type="file" class="form-control" id="input-8" name="photo" value="{{$member->photo}}">
-                    </div>
-                </div>
+                
+                
               </form>
               <div class="btn-group">  
                 <div class="form-group row">
-                    <div class="col-sm-6">
+                    <div class="col-lg-4">
                         <form id="personal-info" action="{{route('member.update', $member->id)}}" method="post">
                             @csrf
                             @method('patch')
@@ -75,19 +71,39 @@
                             </button>
                         </form> 
                     </div>
-                    <form id="personal-info" action="{{route('member.update', $member->id)}}" method="post">
-                        @csrf
-                        @method('patch')
-                        <button type="submit" href="/member" class="btn btn-outline-primary icheck-material-primary"> 
-                            <input id="success1" type="radio" name="kehadiran" value="hadir" checked="hadir">
-                            CONFIRM
-                        </button>
-                    </form>
-                </div> 
-            </div>
-            </div>
+                    <div class="col-lg-4">
+                        <form id="personal-info" action="{{route('member.update', $member->id)}}" method="post">
+                            @csrf
+                            @method('patch')
+                            <button type="submit" href="/member" class="btn btn-outline-primary icheck-material-primary"> 
+                                <input id="success1" type="radio" name="kehadiran" value="hadir" checked="hadir">
+                                CONFIRM
+                            </button>
+                        </form>
+                    </div>
+                    @role('superadministrator')
+                    <div class="col-lg-4">
+         
+                          <button class="btn btn-outline-info icheck-material-primary" data-toggle="modal" data-target="#smallsizemodal">QRCODE</button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="smallsizemodal">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content text-center" style="background: white;">
+                                  <div class="modal-header">
+                                    <div class="modal-body">
+                                      {!! QrCode::size(220)->generate(Request::url()); !!}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    @endrole 
+                  </div>
+                </div>
+              </div>
           </div>
-        </div>
+        </div>>
       </div><!--End Row-->
 
 <!--start overlay-->

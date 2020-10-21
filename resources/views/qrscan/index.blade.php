@@ -24,7 +24,7 @@
                         <video id="preview" class="text-center" style="padding-top: 0px; width: 70vw; height: 50vw; /* 30% of width */">
                         </video>
                         <script type="text/javascript">
-                            let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+                            let scanner = new Instascan.Scanner({ video: document.getElementById('preview'),mirror:false, });
                                 
                                 scanner.addListener('scan', function (content) {
                                         window.location.href = content;

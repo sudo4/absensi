@@ -66,10 +66,11 @@
                     </div>
                   </div>
                 
-                <div class="form-footer">
+                  <div class="form-footer">
                     <a class="btn btn-outline-danger" href="/member"><i class="fa fa-times"></i> CANCEL</a>
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check-square-o"></i> SAVE</button>
                 </div>
+                
               </form>
             </div>
           </div>

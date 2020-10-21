@@ -129,7 +129,7 @@ class VisitorController extends Controller
             $visitor->update($data);
             DB::commit();
 
-            return redirect('/visitor');
+            return redirect('/home');
 
         } catch (\Exception $e) {
             DB::rollBack();

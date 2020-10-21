@@ -119,7 +119,7 @@ class AbsensiController extends Controller
             $member->update($data);
             DB::commit();
 
-            return redirect('/absensi');
+            return redirect('/home');
         } catch (\Exception $e) {
             DB::rollBack();
             dd($e);

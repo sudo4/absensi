@@ -19,6 +19,7 @@
       </ul>
      </div>
       </div>
+               
    <ul class="sidebar-menu">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
@@ -26,7 +27,6 @@
           <i class="zmdi zmdi-view-dashboard"></i> <span>Qr Scanner</span><i class=""></i>
         </a>
       </li>
-     
      <li>
         <a href="javaScript:void();" class="waves-effect">
           <i class="ti ti-desktop"></i> <span>Data</span>
@@ -53,5 +53,6 @@
       <li><a href="javaScript:void();" class="waves-effect"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
       <li><a href="javaScript:void();" class="waves-effect"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
     </ul>
+ 
    
    </div>

@@ -154,7 +154,7 @@ class MemberController extends Controller
 
             $member->update($data);
             DB::commit();
-            return redirect('/member');
+            return redirect('/home');
 
         } catch (\Exception $e) {
             DB::rollBack();

@@ -13,7 +13,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
                 </ol>
             </div>
-
+                @role('superadministrator')
                 <div class="col-lg-3">
                     <!-- Large Size Modal -->
                          <button class="btn btn-outline-primary btn-block m-1" data-toggle="modal" data-target="#formemodal">Tambah Data Baru</button>
@@ -56,6 +56,7 @@
                              </div>
                            </div>
                   </div>
+                  @endrole
 
         </div>
         <!-- End Breadcrumb-->
@@ -93,7 +94,9 @@
                                                 <span class="caret"></span>
                                             </a>
                                             <div class="dropdown-menu">
+                                              @role('superadministrator')
                                               <a href="{{ route('visitor.edit', $a->id) }}" class="dropdown-item">Edit</a>
+                                              @endrole
                                               <a href="{{ route('visitor.show', $a->id) }}" class="dropdown-item">Konfirmasi</a>
                                               <div class="dropdown-divider"></div>
                                               

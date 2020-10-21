@@ -52,7 +52,7 @@
                                             <input type="file" class="form-control" id="input-8" name="photo" required>
                                         </div>
 
-
+                                        
                                         <br>
                                         <div class="form-group">
                                           <button type="submit" class="btn btn-primary icheck-material-primary"> 
@@ -105,7 +105,9 @@
                                                 <span class="caret"></span>
                                             </a>
                                             <div class="dropdown-menu">
+                                              @role('superadministrator')
                                               <a href="{{ route('member.edit', $a->id) }}" class="dropdown-item">Edit</a>
+                                              @endrole
                                               <a href="{{ route('member.show', $a->id) }}" class="dropdown-item">Konfirmasi</a>
                                             </div>
                                             {{-- <a class="btn btn-sm btn-warning" href="{{ route('visitor.edit', $a->id) }}"> edit</a> --}}

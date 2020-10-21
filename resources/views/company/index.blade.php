@@ -13,7 +13,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
                 </ol>
             </div>
-
+                @role('superadministrator')
                 <div class="col-lg-3">
                     <!-- Large Size Modal -->
                          <button class="btn btn-outline-primary btn-block m-1" data-toggle="modal" data-target="#formemodal">Tambah Data Baru</button>
@@ -77,6 +77,7 @@
                             </div>
                           </div>
                   </div>
+                  @endrole
 
         </div>
         <!-- End Breadcrumb-->
@@ -112,14 +113,13 @@
                                             <a type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown">
                                                 <span class="caret"></span>
                                             </a>
+                                            @role('superadministrator')
                                             <div class="dropdown-menu">
+                                              
                                               <a href="{{ route('company.edit', $a->id) }}" class="dropdown-item">Edit</a>
-                                              <a href="javaScript:void();" class="dropdown-item">Another action</a>
-                                              <a href="javaScript:void();" class="dropdown-item">Something else here</a>
-                                              <div class="dropdown-divider"></div>
-                                              <a href="javaScript:void();" class="dropdown-item">Separated link</a>
+                                              
                                             </div>
-                                            {{-- <a class="btn btn-sm btn-warning" href="{{ route('visitor.edit', $a->id) }}"> edit</a> --}}
+                                            @endrole
                                         </td>
                                     </tr>
                                     @endforeach
