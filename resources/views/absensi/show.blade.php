@@ -30,20 +30,13 @@
                     <input type="text" class="form-control" id="input-1" name="nama" disabled value="{{$member->nama}}">
                   </div>
                 </div>
-               
                 <div class="form-group row">
-                    <label for="input-1" class="col-sm-2 col-form-label">P3MI</label>
-                    <div class="col-sm-10">
-                        <div class="form-control single-select" name="company_id" disabled> 
-                            @foreach ($company as $company)
-                                <option value="{{ $company->id }}"
-                                    @if ($company->id == $member->company_id)
-                                        selected
-                                    @endif disabled>{{ $company->nama }}</option>  
-                            @endforeach   
-                        </div>
-                    </div>
+                  <label for="input-1" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input-1" name="company_id" disabled value="{{$member->company['nama']}}">
+                  </div>
                 </div>
+               
                 <div class="form-group row">
                     <label for="input-1" class="col-sm-2 col-form-label">No. Handphone</label>
                     <div class="col-sm-10">
@@ -56,30 +49,21 @@
                     <img class="col-sm-3" src="{{asset($member->photo)}}" alt="">
                   </div>
                 </div>
-                <div class="form-group row">
-                    <label for="input-1" class="col-sm-2 col-form-label">Pilih Foto</label>
-                    <div class="col-sm-10">  
-                        <input type="file" class="form-control" id="input-8" name="photo" value="{{$member->photo}}">
-                    </div>
-                </div>
               </form>
               <div class="btn-group">  
                 <div class="form-group row">
-                    <div class="col-sm-6">
-                        <form id="personal-info" action="{{route('absensi.update', $member->id)}}" method="post">
+                    <div class="col-sm-4">
+                        <form id="personal-info" action="{{route('absensi.update', $member->uuid)}}" method="post">
                             @csrf
                             @method('patch')
                             <button type="submit" href="/absensi" class="btn btn-outline-danger icheck-material-primary"> 
-                                <input id="success1" type="radio" name="absensi" value="keluar" checked="masuk">
-                                
-                                
-                               
+                                <input id="success1" type="radio" name="absensi" value="keluar" checked="masuk">                       
                                 KELUAR
                             </button>
                         </form> 
                     </div>
-                    <div class="col-sm-6">
-                        <form id="personal-info" action="{{route('absensi.update', $member->id)}}" method="post">
+                    <div class="col-sm-4">
+                        <form id="personal-info" action="{{route('absensi.update', $member->uuid)}}" method="post">
                             @csrf
                             @method('patch')
                             <button type="submit" href="/member" class="btn btn-outline-primary icheck-material-primary"> 
@@ -88,6 +72,24 @@
                             </button> 
                         </form>
                     </div>
+                    @role('superadministrator')
+                    <div class="col-sm-4">
+         
+                          <button class="btn btn-outline-info icheck-material-primary" data-toggle="modal" data-target="#smallsizemodal">QRCODE</button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="smallsizemodal">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content text-center" style="background: white;">
+                                  <div class="modal-header">
+                                    <div class="modal-body">
+                                      {!! QrCode::size(220)->generate(Request::url()); !!}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    @endrole 
                     
                 </div> 
             </div>

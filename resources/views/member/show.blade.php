@@ -62,7 +62,7 @@
               <div class="btn-group">  
                 <div class="form-group row">
                     <div class="col-lg-4">
-                        <form id="personal-info" action="{{route('member.update', $member->id)}}" method="post">
+                        <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
                             @csrf
                             @method('patch')
                             <button type="submit" href="/member" class="btn btn-outline-danger icheck-material-primary"> 
@@ -72,7 +72,7 @@
                         </form> 
                     </div>
                     <div class="col-lg-4">
-                        <form id="personal-info" action="{{route('member.update', $member->id)}}" method="post">
+                        <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
                             @csrf
                             @method('patch')
                             <button type="submit" href="/member" class="btn btn-outline-primary icheck-material-primary"> 

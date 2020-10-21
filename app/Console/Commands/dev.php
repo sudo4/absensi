@@ -37,12 +37,11 @@ class dev extends Command
      */
     public function handle()
     {
-
-        if ($isProduction == false) {            
+   
+            $this->call('migrate:rollback'); 
+            $this->call('migrate');       
             $this->call('migrate:fresh');
             $this->call('db:seed');
-        } else {
-            $this->error('Action not allowed on production environment!');
-        }
+        
     }
 }

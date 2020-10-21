@@ -14,7 +14,8 @@ class CreateMembersTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
+            $table->uuid('uuid');
             $table->string('nama');
             $table->string('company_id');
             $table->string('no_hp', 12)->unique();

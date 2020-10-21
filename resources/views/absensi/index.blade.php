@@ -37,7 +37,7 @@
                                 <tbody>
                                     @foreach($member as $a)
                                     <tr>
-                                        <td><a href="{{ route('absensi.show', $a->id) }}" style="color: #ffffff; "><p>{{ $a->nama }}</p></a></td>
+                                        <td><a href="{{ route('absensi.show', $a->uuid) }}" style="color: #ffffff; "><p>{{ $a->nama }}</p></a></td>
                                         <td>{{ $a->company['nama'] }}</td>
                                         <td class="text-center">
                                           @if($a->absensi == 'Masuk')                                                
@@ -61,7 +61,7 @@
                                           @if($a->absensi == NULL)                    
                                           <p class="text-success"></p>
                                           @elseif($a->absensi != NULL)
-                                          <p class="text-success">{{ strtoupper(Auth::user()->name) }}</p>
+                                          <p class="text-success">{{ strtoupper($a->confirm_by) }}</p>
                                           @endif
                                             
 

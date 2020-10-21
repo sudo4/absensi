@@ -72,7 +72,7 @@ class VisitorController extends Controller
      */
     public function show($id)
     {
-        $visitor = Visitor::findOrFail($id);
+        $visitor = Visitor::where('uuid', $id)->first();
         return view('visitor.show', compact('visitor'));
     }
 
@@ -84,7 +84,7 @@ class VisitorController extends Controller
      */
     public function edit($id)
     {
-        $visitor = Visitor::findOrFail($id);
+        $visitor = Visitor::where('uuid',$id)->first;
         return view('visitor.edit', compact('visitor'));
 
     }
@@ -107,7 +107,7 @@ class VisitorController extends Controller
             
         ]);
 
-        $visitor = Visitor::findOrFail($id);
+        $visitor = Visitor::where('uuid', $id)->first();
 
         DB::beginTransaction();
 

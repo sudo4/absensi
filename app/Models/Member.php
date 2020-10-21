@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
+use App\Traits\Uuid;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Member extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Uuid;
 
     protected $fillable = [
+        'uuid',
         'nama',
         'company_id',
         'no_hp',

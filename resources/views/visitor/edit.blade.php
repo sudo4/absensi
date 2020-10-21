@@ -34,7 +34,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <form id="personal-info" action="{{route('visitor.update', $visitor->id)}}" method="post">
+              <form id="personal-info" action="{{route('visitor.update', $visitor->uuid)}}" method="post">
                 @csrf
                 @method('patch')
                 <h4 class="form-header text-uppercase">

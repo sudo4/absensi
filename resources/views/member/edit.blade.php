@@ -19,7 +19,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <form id="personal-info" action="{{route('member.update', $member->id)}}" method="post" enctype="multipart/form-data">
+              <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('patch')
                 <h4 class="form-header text-uppercase">

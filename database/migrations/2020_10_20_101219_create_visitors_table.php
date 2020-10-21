@@ -14,7 +14,8 @@ class CreateVisitorsTable extends Migration
     public function up()
     {
         Schema::create('visitors', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
+            $table->uuid('uuid');
             $table->string('nama');
             $table->string('nik', 16)->unique;
             $table->string('phone')->unique;

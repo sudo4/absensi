@@ -84,7 +84,7 @@ class MemberController extends Controller
      */
     public function show($id)
     {
-        $member = Member::findorFail($id);
+        $member = Member::where('uuid', $id)->first();
         $company = Company::all();
         return view('member.show', compact('member', 'company'));
     }
@@ -100,7 +100,7 @@ class MemberController extends Controller
     
      public function edit($id)
     {
-        $member = Member::findOrFail($id);
+        $member = Member::where('uuid', $id)->first();
         $company = Company::all();
         return view('member.edit', compact('member','company'));
     }
@@ -122,7 +122,7 @@ class MemberController extends Controller
             'kehadiran',
         ]);
 
-        $member = Member::findOrFail($id);
+        $member = Member::where('uuid', $id)->first();
         DB::beginTransaction();
 
         try {

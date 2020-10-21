@@ -8,6 +8,7 @@ use App\Models\Company;
 
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 use Carbon;
 
 
@@ -71,7 +72,7 @@ class AbsensiController extends Controller
      */
     public function show($id)
     {
-        $member = Member::where('kehadiran', 'hadir')->first();  
+        $member = Member::where('uuid', $id)->first();  
         $absensi = Absensi::all();
         $company = Company::all();
         return view('absensi.show', compact('member', 'company'));
@@ -109,12 +110,9 @@ class AbsensiController extends Controller
             if($request->has('absensi')) {
                 $data = [
                     'absensi' => $request->absensi,
+                    'confirm_by' => Auth::user()->name,
                 ];
-            } elseif ($member->absensi == 'Masuk') {
-                $absensi->update([
-                    'masuk' => now(),
-                ]); 
-            }
+            } 
 
             $member->update($data);
             DB::commit();

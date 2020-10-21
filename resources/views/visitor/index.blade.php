@@ -95,9 +95,9 @@
                                             </a>
                                             <div class="dropdown-menu">
                                               @role('superadministrator')
-                                              <a href="{{ route('visitor.edit', $a->id) }}" class="dropdown-item">Edit</a>
+                                              <a href="{{ route('visitor.edit', $a->uuid) }}" class="dropdown-item">Edit</a>
                                               @endrole
-                                              <a href="{{ route('visitor.show', $a->id) }}" class="dropdown-item">Konfirmasi</a>
+                                              <a href="{{ route('visitor.show', $a->uuid) }}" class="dropdown-item">Konfirmasi</a>
                                               <div class="dropdown-divider"></div>
                                               
                                             </div>
