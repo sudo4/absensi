@@ -7,6 +7,6 @@
 #composer require composer require simplesoftwareio/simple-qrcode "~4"
 
 #roles and middleware
-# composer require santigarcor/laratrust
+#composer require santigarcor/laratrust
 
 #php artisan dev:init
