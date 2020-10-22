@@ -59,8 +59,8 @@
                   </div>
                 </div>
                 <div class="form-footer">
-                    <button type="cancel" class="btn btn-outline-danger icheck-material-primary"><i class="fa fa-times"></i> CANCEL</button>
-                    <button type="submit" class="btn btn-outline-success icheck-material-primary">                     
+                    <button type="cancel" class="btn btn-block btn-outline-danger icheck-material-primary">CANCEL</button>
+                    <button type="submit" class="btn btn-block btn-outline-success icheck-material-primary">                     
                       <input type="radio" name="konfirmasi" value="tidak_hadir" check="tidak_hadir">
                       SAVE
                     </button>

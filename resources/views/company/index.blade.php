@@ -89,7 +89,7 @@
                         <div class="table-responsive">
                             <table id="example" class="table table-bordered">
                                 <thead>
-                                    <tr></a>
+                                    <tr class="text-center"></a>
                                         <th>P3MI</th>
                                         <th>SIPPMI</th>
                                         <th>Alamat</th>

@@ -77,7 +77,7 @@
                         <div class="table-responsive">
                             <table id="example" class="table table-bordered">
                                 <thead>
-                                    <tr></a>
+                                    <tr class="text-center"></a>
                                         <th>Nama</th>
                                         <th>P3MI</th>
                                         <th>No. Handphone</th>
@@ -90,7 +90,7 @@
                                     <tr>
                                         <td>{{ $a->nama }}</td>
                                         <td>{{ $a->company['nama'] }}</td>
-                                        <td>{{ $a->no_hp }}</td>
+                                        <td class="text-center">{{ $a->no_hp }}</td>
                                         <td class="text-center">
                                           @if($a->kehadiran == 'hadir')                                                
                                           <strong class="text-success">HADIR</strong>
