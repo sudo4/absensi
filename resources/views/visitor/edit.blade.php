@@ -6,11 +6,10 @@
       <!-- Breadcrumb-->
      <div class="row pt-2 pb-2">
         <div class="col-sm-9">
-            <h4 class="page-title">Form Validation</h4>
+            <h4 class="page-title">Munas APJATI 2020</h4>
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javaScript:void();">Dashtreme</a></li>
-            <li class="breadcrumb-item"><a href="javaScript:void();">Forms</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Form Validation</li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Data Pengunjung</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ubah Data Pengunjung</li>
          </ol>
        </div>
        <div class="col-sm-3">
@@ -60,7 +59,7 @@
                   </div>
                 </div>
                 <div class="form-footer">
-                    <button type="cancel" class="btn btn-outline-danger"><i class="fa fa-times"></i> CANCEL</button>
+                    <button type="cancel" class="btn btn-outline-danger icheck-material-primary"><i class="fa fa-times"></i> CANCEL</button>
                     <button type="submit" class="btn btn-outline-success icheck-material-primary">                     
                       <input type="radio" name="konfirmasi" value="tidak_hadir" check="tidak_hadir">
                       SAVE

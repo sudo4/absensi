@@ -6,11 +6,10 @@
       <!-- Breadcrumb-->
      <div class="row pt-2 pb-2">
         <div class="col-sm-9">
-            <h4 class="page-title">Form Validation</h4>
+            <h4 class="page-title">Munas APJATI 2020 </h4>
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javaScript:void();">Dashtreme</a></li>
-            <li class="breadcrumb-item"><a href="javaScript:void();">Forms</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Form Validation</li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Absensi Peserta Munas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Konfirmasi Kehadiran</li>
          </ol>
        </div>
      </div>
@@ -22,7 +21,7 @@
               <form>
                 <h4 class="form-header text-uppercase">
                   <i class="fa fa-user-circle-o"></i>
-                   Personal Info
+                  Data 
                 </h4>
                 <div class="form-group row">
                   <label for="input-1" class="col-sm-2 col-form-label">Nama Lengkap</label>

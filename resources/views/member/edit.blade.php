@@ -6,11 +6,11 @@
       <!-- Breadcrumb-->
      <div class="row pt-2 pb-2">
         <div class="col-sm-9">
-            <h4 class="page-title">Form Validation</h4>
+            <h4 class="page-title">Munas APJATI 2020</h4>
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javaScript:void();">Dashtreme</a></li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Data Anggota</a></li>
             <li class="breadcrumb-item"><a href="javaScript:void();">Forms</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Form Validation</li>
+            <li class="breadcrumb-item active" aria-current="page">Ubah Data Anggota</li>
          </ol>
        </div>
      </div>

@@ -1,14 +1,14 @@
   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
-      <a href="/qrscan">
+      <a href="/home">
+       <h5 class="logo-text">PANITIA</h5>
        <h5 class="logo-text">Munas APJATI 2020</h5>
      </a>
    </div>
    <div class="user-details">
     <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
-      <div class="avatar"><img class="mr-3 side-user-img" src="/assets/images/logo-icon2.png" alt="user avatar"></div>
-       <div class="media-body">
-       <h6 class="side-user-name">Mark Johnson</h6>
+       <div class="media-body text-center">
+       <h6 class="side-user-name">Halo, {{Auth::user()->name}}</h6>
       </div>
        </div>
      <div id="user-dropdown" class="collapse">

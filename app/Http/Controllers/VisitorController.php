@@ -84,7 +84,7 @@ class VisitorController extends Controller
      */
     public function edit($id)
     {
-        $visitor = Visitor::where('uuid',$id)->first;
+        $visitor = Visitor::where('uuid',$id)->first();
         return view('visitor.edit', compact('visitor'));
 
     }

@@ -6,11 +6,10 @@
       <!-- Breadcrumb-->
      <div class="row pt-2 pb-2">
         <div class="col-sm-9">
-            <h4 class="page-title">Form Validation</h4>
+            <h4 class="page-title">Munas APJATI 2020</h4>
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javaScript:void();">Dashtreme</a></li>
-            <li class="breadcrumb-item"><a href="javaScript:void();">Forms</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Form Validation</li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Data Anggota</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Konfirmasi Kehadiran</li>
          </ol>
        </div>
      </div>
@@ -61,7 +60,7 @@
               </form>
               <div class="btn-group">  
                 <div class="form-group row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
                             @csrf
                             @method('patch')
@@ -71,7 +70,7 @@
                             </button>
                         </form> 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
                             @csrf
                             @method('patch')
@@ -81,8 +80,9 @@
                             </button>
                         </form>
                     </div>
+                    
                     @role('superadministrator')
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
          
                           <button class="btn btn-outline-info icheck-material-primary" data-toggle="modal" data-target="#smallsizemodal">QRCODE</button>
                           <!-- Modal -->
@@ -99,11 +99,11 @@
                             </div>
                     </div>
                     @endrole 
-                  </div>
+                  
                 </div>
               </div>
           </div>
-        </div>>
+        </div>
       </div><!--End Row-->
 
 <!--start overlay-->
