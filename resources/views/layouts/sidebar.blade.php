@@ -8,7 +8,7 @@
    <div class="user-details">
     <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
        <div class="media-body text-center">
-       <h6 class="side-user-name">Halo, {{Auth::user()->name}}</h6>
+       <h6 class="side-user-name">Halo, "{{ucfirst(Auth::user()->name)}}"</h6>
       </div>
        </div>
      <div id="user-dropdown" class="collapse">

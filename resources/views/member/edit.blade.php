@@ -9,7 +9,6 @@
             <h4 class="page-title">Munas APJATI 2020</h4>
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javaScript:void();">Data Anggota</a></li>
-            <li class="breadcrumb-item"><a href="javaScript:void();">Forms</a></li>
             <li class="breadcrumb-item active" aria-current="page">Ubah Data Anggota</li>
          </ol>
        </div>
@@ -67,8 +66,8 @@
                   </div>
                 
                   <div class="form-footer">
-                    <a class="btn btn-block btn-outline-danger" href="/member"><i class="fa fa-times"></i> CANCEL</a>
-                    <button type="submit" class="btn btn-block btn-outline-primary"><i class="fa fa-check-square-o"></i> SAVE</button>
+                    <a class="btn btn-block btn-outline-danger" href="/member"> BATAL</a>
+                    <button type="submit" class="btn btn-block btn-outline-primary">SIMPAN</button>
                 </div>
                 
               </form>
