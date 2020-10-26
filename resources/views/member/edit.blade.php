@@ -38,7 +38,7 @@
                     <select class="form-control single-select" name="company_id" > 
                         <option selected value="" readonly>Masukkan Nama P3MI</option>
                         @foreach ($company as $company)
-                            <option value="{{ $company->id }}"
+                            <option value=" {{ $company->id }}"
                                 @if ($company->id == $member->company_id)
                                     selected
                                 @endif>{{ $company->nama }}</option>  
